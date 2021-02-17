@@ -21,7 +21,7 @@ resource "aws_subnet" "public" {
 
       "kubernetes.io/cluster/${var.cluster_name}-${var.environment}" = "shared"
       "kubernetes.io/role/elb" = 1
-    Name   = "node-group-subnet-${count.index + 1}-${var.environment}"
+    Name   = "public-subnet-${count.index + 1}-${var.environment}"
     state  = "public"
   }
 }
