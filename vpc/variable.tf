@@ -1,5 +1,6 @@
 variable "environment" {
     description = "Environment name"
+    default = "dev"
 }
 
 variable "vpc_cidr" {
@@ -9,10 +10,12 @@ variable "vpc_cidr" {
 
 variable "vpc_name" {
     description = "Name of vpc"
+    default = "dev-vpc"
 }   
 
 variable "cluster_name" {
     description = "Name of cluster"
+    default = "eks-dev"
 }
 
 variable "public_subnets_cidr" {
